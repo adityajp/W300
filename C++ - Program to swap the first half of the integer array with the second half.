@@ -1,0 +1,22 @@
+// Program to shift the first half of the array to the second half.
+#include<iostream>
+using namespace std;
+int main()
+{
+  int a[10],i,j,t;
+	cout<<"Enter the elements of the array : "<<endl;
+	for(i=0;i<10;i++)
+	cin>>a[i];
+	for(i=0;i<=10/2;i++)
+	for(j=10;j>=10/2;j--)
+		{
+			t=a[i];
+			a[i]=a[j];
+			a[j]=t;
+		}
+	cout<<"\n\n";
+	cout<<"The updated array is: "<<endl;
+	for(i=0;i<10;i++)
+	cout<<"\n"<<a[i];
+
+}
