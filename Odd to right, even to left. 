@@ -1,0 +1,25 @@
+//Program to accept an array of elements and shift the odd elements to the right side and even elements to the left side.
+#include<iostream> 
+using namespace std;
+int main() 
+{
+  int a[10],i,j,t;
+	cout<<"Enter the elements of the array: "<<endl;
+	for(i=0;i<10;i++)
+	cin>>a[i];
+	for(i=0;i<10;i++)
+	{
+		for(j=i+1;j<10;j++)
+		if(a[i]%2!=0)
+		{
+			t=a[i];
+			a[i]=a[j];
+			a[j]=t;
+		}
+	}
+	cout<<"\n\n";
+	cout<<"The updated array is: "<<endl;
+	for(i=0;i<10;i++)
+	cout<<a[i]<<"\t";
+	
+}
